@@ -31,7 +31,8 @@
       "cache": false
     },
     "deploy": {
-      "cache": false
+      "cache": false,
+      "env": ["ALCHEMY_ENV"]
     },
     "destroy": {
       "cache": false

@@ -4,9 +4,17 @@ import { Worker } from "alchemy/cloudflare";
 import { D1Database } from "alchemy/cloudflare";
 import { config } from "dotenv";
 
-config({ path: "./.env" });
-config({ path: "../../apps/web/.env" });
-config({ path: "../../apps/server/.env" });
+const mode = process.env.ALCHEMY_ENV ?? process.env.NODE_ENV ?? "development";
+const loadEnv = (path: string, override = false) => {
+  config({ path, override });
+};
+
+loadEnv("./.env");
+loadEnv(`./.env.${mode}`, true);
+loadEnv("../../apps/web/.env");
+loadEnv(`../../apps/web/.env.${mode}`, true);
+loadEnv("../../apps/server/.env");
+loadEnv(`../../apps/server/.env.${mode}`, true);
 
 const app = await alchemy("orpc-test");
 

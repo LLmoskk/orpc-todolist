@@ -16,6 +16,7 @@
     "db:push": "turbo -F @orpc-test/db db:push",
     "db:generate": "turbo -F @orpc-test/db db:generate",
     "deploy": "turbo -F @orpc-test/infra deploy",
+    "deploy:dev": "cross-env ALCHEMY_ENV=dev turbo -F @orpc-test/infra deploy",
     "destroy": "turbo -F @orpc-test/infra destroy",
     "check": "biome check --write ."
   },
