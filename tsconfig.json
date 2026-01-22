@@ -1,0 +1,3 @@
+{
+  "extends": "@orpc-test/config/tsconfig.base.json"
+}

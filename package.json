@@ -1,0 +1,36 @@
+{
+  "name": "orpc-test",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "dev:server": "turbo -F server dev",
+    "db:push": "turbo -F @orpc-test/db db:push",
+    "db:generate": "turbo -F @orpc-test/db db:generate",
+    "deploy": "turbo -F @orpc-test/infra deploy",
+    "destroy": "turbo -F @orpc-test/infra destroy",
+    "check": "biome check --write ."
+  },
+  "dependencies": {
+    "@orpc-test/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@cloudflare/workers-types": "catalog:",
+    "@orpc-test/config": "workspace:*",
+    "@types/node": "catalog:",
+    "turbo": "^2.6.3",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.28.1"
+}
