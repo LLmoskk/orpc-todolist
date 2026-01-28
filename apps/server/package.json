@@ -16,6 +16,7 @@
     "@orpc/zod": "catalog:",
     "dotenv": "catalog:",
     "hono": "catalog:",
+    "openai": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {

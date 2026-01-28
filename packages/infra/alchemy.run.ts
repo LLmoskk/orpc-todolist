@@ -37,6 +37,8 @@ export const server = await Worker("server", {
   bindings: {
     DB: db,
     CORS_ORIGIN: alchemy.env.CORS_ORIGIN!,
+    AI_API_KEY: alchemy.env.AI_API_KEY!,
+    AI_API_BASE_URL: alchemy.env.AI_API_BASE_URL!,
   },
   dev: {
     port: 3000,

@@ -19,6 +19,7 @@
     "@orpc/zod": "catalog:",
     "dotenv": "catalog:",
     "drizzle-orm": "catalog:",
+    "openai": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
